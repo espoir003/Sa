@@ -1,0 +1,16 @@
+RewriteEngine On
+
+RewriteRule ^home main/Public/home.php
+
+RewriteRule ^login main/Public/login.php
+
+RewriteRule ^sign-up main/Public/sign-up.php
+
+RewriteRule ^dashboard main/Private/dashboard.php
+
+
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ private/404.php [L]
